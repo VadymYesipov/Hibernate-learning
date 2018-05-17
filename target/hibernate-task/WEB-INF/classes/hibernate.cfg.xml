@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/example</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <property name="connection.username">admin</property>
+        <property name="connection.password"></property>
+
+        <!-- DB schema will be updated if needed -->
+        <!--<property name="hbm2ddl.auto">update</property>-->
+        <mapping class="com.aimprosoft.yesipov.hibernate.dao.ContactEntity"/>
+        <mapping class="com.aimprosoft.yesipov.hibernate.dao.ContactHobbyDetailEntity"/>
+        <mapping class="com.aimprosoft.yesipov.hibernate.dao.ContactTelDetailEntity"/>
+        <mapping class="com.aimprosoft.yesipov.hibernate.dao.HobbyEntity"/>
+        <mapping class="com.aimprosoft.yesipov.hibernate.repository.entity.DepartmentEntity"/>
+        <mapping class="com.aimprosoft.yesipov.hibernate.repository.entity.EmployeeEntity"/>
+        <!--<mapping resource="com/aimprosoft/yesipov/hibernate/dao/Contact2Entity.hbm.xml"/>
+        <mapping resource="com/aimprosoft/yesipov/hibernate/dao/ContactEntity.hbm.xml"/>
+        <mapping resource="com/aimprosoft/yesipov/hibernate/dao/ContactHobbyDetailEntity.hbm.xml"/>
+        <mapping resource="com/aimprosoft/yesipov/hibernate/dao/ContactTelDetailEntity.hbm.xml"/>
+        <mapping resource="com/aimprosoft/yesipov/hibernate/dao/HobbyEntity.hbm.xml"/>-->
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,19 @@
+
+<head>
+
+	<title>
+		${title}
+	</title>
+	
+<%--=========================================================================== 
+Bind CSS document.
+===========================================================================--%> 
+	<link rel="stylesheet" type="text/css" media="screen" href="style/st4.css"/>
+	<script rel="script" src="../../js/script.js"></script>
+<%--=========================================================================== 
+If you define http-equiv attribute, set the content type and the charset the same
+as you set them in a page directive.
+===========================================================================--%> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+</head>
