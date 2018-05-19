@@ -41,8 +41,26 @@ public class MySQLDepartmentDAO implements DepartmentDAO {
     }
 
     @Override
-    public void editDepartment(DepartmentEntity department) {
+    public void editDepartment(DepartmentEntity department, Integer id) {
+        log.debug("Editing a department");
 
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+
+        session.beginTransaction();
+
+        Query query = session.createQuery("update DepartmentEntity set id = :newId, originalName = :name " +
+                "where id = :id");
+
+        query.setParameter("newId", department.getId());
+        query.setParameter("name", department.getOriginalName());
+        query.setParameter("id", id);
+
+        int result = query.executeUpdate();
+        log.debug("Count of updated departments:" + result);
+
+        session.getTransaction().commit();
+
+        session.close();
     }
 
     @Override

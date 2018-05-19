@@ -7,6 +7,7 @@ import com.aimprosoft.yesipov.hibernate.repository.dao.impl.MySQLEmployeeDAO;
 import com.aimprosoft.yesipov.hibernate.repository.entity.DepartmentEntity;
 import com.aimprosoft.yesipov.hibernate.repository.entity.EmployeeEntity;
 import com.aimprosoft.yesipov.hibernate.web.service.AddEntityService;
+import com.aimprosoft.yesipov.hibernate.web.service.EditEntityService;
 import com.aimprosoft.yesipov.hibernate.web.service.ListService;
 import com.aimprosoft.yesipov.hibernate.web.service.RemoveEntityService;
 import org.apache.log4j.Logger;
@@ -19,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Date;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Controller extends HttpServlet {
 
@@ -71,8 +72,7 @@ public class Controller extends HttpServlet {
                         Path.DEPARTMENTS_JSP :
                         Path.ALL_EMPLOYEES_JSP;
             case "filteredList":
-                executeFilteredListService(request);
-                return Path.EMPLOYEES_JSP;
+                return executeFilteredListService(request);
             case "addEdit":
                 return request.getParameter("name").equals("departments") ?
                         Path.ADD_EDIT_DEPARTMENT :
@@ -86,21 +86,239 @@ public class Controller extends HttpServlet {
             case "addDepartment":
                 return addDepartmentAndReturnPath(request);
             case "editEmployee":
-                break;
+                return editEmployeeAndReturnPath(request);
             case "editDepartment":
-                break;
+                return editDepartmentAndReturnPath(request);
         }
         return null;
     }
 
-    private void executeFilteredListService(HttpServletRequest request) {
+    private String executeFilteredListService(HttpServletRequest request) {
+
+        String errorMessage = null;
+        String forward = Path.ERROR_PAGE;
 
         Integer id = Integer.valueOf(request.getParameter("id"));
 
-        ListService listService = new ListService(departmentDAO, employeeDAO);
+        List<DepartmentEntity> departments = (List<DepartmentEntity>) request.getServletContext().getAttribute("departmentList");
 
-        request.getServletContext().setAttribute("employeeList",
-                listService.getFilteredList(id));
+        DepartmentEntity department = departments.stream()
+                .filter(x -> id.equals(x.getId()))
+                .findAny()
+                .orElse(null);
+
+        if (department != null) {
+            ListService listService = new ListService(departmentDAO, employeeDAO);
+
+            request.getServletContext().setAttribute("employeeList",
+                    listService.getFilteredList(id));
+
+            forward = Path.EMPLOYEES_JSP;
+        } else {
+            errorMessage = "A department with such id doesn't exist";
+            request.setAttribute("errorMessage", errorMessage);
+            log.error("errorMessage --> " + errorMessage);
+        }
+
+        log.trace("Forward address --> " + forward);
+        log.debug("Controller finished, now go to forward address --> " + forward);
+
+        log.debug("Command finished");
+        return forward;
+    }
+
+    private String editEmployeeAndReturnPath(HttpServletRequest request) {
+        log.debug("Command starts");
+
+        String errorMessage = null;
+        String forward = Path.ERROR_PAGE;
+
+        Integer id = Integer.valueOf(request.getParameter("id"));
+
+        String newID = request.getParameter("newId");
+        Integer newId = newID.equals("") ? 0 : Integer.valueOf(newID);
+
+        String email = request.getParameter("email").trim();
+
+        List<EmployeeEntity> employees = (List<EmployeeEntity>) request.getServletContext().getAttribute("employeeList");
+
+        EmployeeEntity object1 = employees.stream()
+                .filter(x -> id.equals(x.getId()))
+                .findAny()
+                .orElse(null);
+
+        EmployeeEntity object2 = employees.stream()
+                .filter(x -> x.getEmail().equals(email) || newId.equals(x.getId()))
+                .findAny()
+                .orElse(null);
+
+        if (object2 != null || object1 == null) {
+            errorMessage = "An employee with such email or id already exists";
+            request.setAttribute("errorMessage", errorMessage);
+            log.error("errorMessage --> " + errorMessage);
+        } else {
+
+            EmployeeEntity employee = setUpEmployee(request, employees, id, newId);
+
+            employees = new EditEntityService(employeeDAO).execute(employee, id);
+
+            log.trace("Employees size = " + employees.size());
+            request.getServletContext().setAttribute("employeeList", employees);
+
+            forward = Path.ADD_EDIT_EMPLOYEE;
+        }
+
+        setUpValidationValues(request);
+
+        log.trace("Forward address --> " + forward);
+        log.debug("Controller finished, now go to forward address --> " + forward);
+        log.debug("Command finished");
+
+        return forward;
+    }
+
+    private EmployeeEntity setUpEmployee(HttpServletRequest request, List<EmployeeEntity> employees, Integer id, Integer newId) {
+
+        EmployeeEntity employee = new EmployeeEntity();
+
+        employee.setId(newId.equals(0) ? id : newId);
+
+        String firstName = request.getParameter("firstName");
+        firstName = firstName.equals("")
+                ? getStream(employees, id)
+                .map(EmployeeEntity::getFirstName)
+                .findAny()
+                .orElse("")
+                : firstName;
+        employee.setFirstName(firstName);
+
+        String lastName = request.getParameter("lastName");
+        lastName = lastName.equals("")
+                ? getStream(employees, id)
+                .map(EmployeeEntity::getLastName)
+                .findAny()
+                .orElse("")
+                : lastName;
+        employee.setLastName(lastName);
+
+        String birth = request.getParameter("birthday");
+        java.util.Date birthday = birth.equals("")
+                ? getStream(employees, id)
+                .map(EmployeeEntity::getBirthday)
+                .findAny()
+                .orElse(null)
+                : Date.valueOf(request.getParameter("birthday"));
+        employee.setBirthday(birthday);
+
+        String email = request.getParameter("email");
+        email = email.equals("")
+                ? getStream(employees, id)
+                .map(EmployeeEntity::getEmail)
+                .findAny()
+                .orElse(null)
+                : email;
+        employee.setEmail(email);
+
+        String job = request.getParameter("position");
+        job = job.equals("")
+                ? getStream(employees, id)
+                .map(EmployeeEntity::getJob)
+                .findAny()
+                .orElse("")
+                : job;
+        employee.setJob(job);
+
+        String departmentID = request.getParameter("departmentId");
+        Integer departmentId = departmentID.equals("") ?
+                getStream(employees, id)
+                        .map(EmployeeEntity::getDepartmentByDepartmentId)
+                        .findAny()
+                        .orElse(null)
+                        .getId()
+                : Integer.valueOf(departmentID);
+        DepartmentEntity department = new DepartmentEntity();
+        department.setId(departmentId);
+        employee.setDepartmentByDepartmentId(department);
+
+        String wage = request.getParameter("salary");
+        Double salary = wage.equals("") ?
+                getStream(employees, id)
+                        .map(EmployeeEntity::getSalary)
+                        .findAny()
+                        .orElse(null)
+                : Double.valueOf(wage);
+        employee.setSalary(salary);
+
+        return employee;
+    }
+
+    private Stream<EmployeeEntity> getStream(List<EmployeeEntity> employees, Integer id) {
+        return employees.stream()
+                .filter(x -> id.equals(x.getId()));
+    }
+
+    private String editDepartmentAndReturnPath(HttpServletRequest request) {
+        log.debug("Command starts");
+
+        String errorMessage = null;
+        String forward = Path.ERROR_PAGE;
+
+        Integer id = Integer.valueOf(request.getParameter("id"));
+
+        String newID = request.getParameter("newId");
+        Integer newId = newID.equals("") ? -1 : Integer.valueOf(newID);
+
+        String name = request.getParameter("departmentName").trim();
+
+        request.setAttribute("edit_ID", id);
+        request.setAttribute("new_edit_ID", newId);
+        request.setAttribute("edit_name", name);
+
+        List<DepartmentEntity> departments = (List<DepartmentEntity>) request.getServletContext().getAttribute("departmentList");
+
+        DepartmentEntity object1 = departments.stream()
+                .filter(x -> id.equals(x.getId()))
+                .findAny()
+                .orElse(null);
+
+        DepartmentEntity object2 = departments.stream()
+                .filter(x -> x.getOriginalName().equals(name) || newId.equals(x.getId()))
+                .findAny()
+                .orElse(null);
+
+        if (object2 != null || object1 == null) {
+            errorMessage = "A department with such name or id already exists";
+            request.setAttribute("errorMessage", errorMessage);
+            log.error("errorMessage --> " + errorMessage);
+        } else {
+
+            DepartmentEntity department = new DepartmentEntity();
+
+            department.setId(newId == -1 ? id : newId);
+            String originalName = name.equals("")
+                    ? departments.stream()
+                    .filter(x -> id.equals(x.getId()))
+                    .map(DepartmentEntity::getOriginalName)
+                    .findAny()
+                    .orElse("")
+                    : name;
+            department.setOriginalName(originalName);
+
+            departments = new EditEntityService(departmentDAO).execute(department, id);
+
+            log.trace("Departments size = " + departments.size());
+            request.getServletContext().setAttribute("departmentList", departments);
+
+            forward = Path.ADD_EDIT_DEPARTMENT;
+        }
+
+        setUpValidationValues(request);
+
+        log.trace("Forward address --> " + forward);
+        log.debug("Controller finished, now go to forward address --> " + forward);
+
+        log.debug("Command finished");
+        return forward;
     }
 
     private String removeEmployeeAndReturnPath(HttpServletRequest request) {
@@ -150,10 +368,6 @@ public class Controller extends HttpServlet {
                 .findAny()
                 .orElse(null);
 
-        List<EmployeeEntity> filteredEmployees = employees.stream()
-                .filter(x -> id.equals(x.getDepartmentByDepartmentId().getId()))
-                .collect(Collectors.toList());
-
         if (department == null) {
             errorMessage = "A department with such id doesn't exist";
             request.setAttribute("errorMessage", errorMessage);
@@ -199,7 +413,7 @@ public class Controller extends HttpServlet {
 
         if (object == null) {
 
-            EmployeeEntity employee = setUpEmployee(request, employees);
+            EmployeeEntity employee = setUpEmployee(request);
             employee.setEmail(email);
 
             employees = new AddEntityService(employeeDAO).execute(employee);
@@ -215,6 +429,7 @@ public class Controller extends HttpServlet {
             return forward;
         }
 
+        setUpValidationValues(request);
 
         log.trace("Forward address --> " + forward);
         log.debug("Controller finished, now go to forward address --> " + forward);
@@ -223,10 +438,8 @@ public class Controller extends HttpServlet {
         return forward;
     }
 
-    private EmployeeEntity setUpEmployee(HttpServletRequest request, List<EmployeeEntity> employees) {
+    private EmployeeEntity setUpEmployee(HttpServletRequest request) {
         EmployeeEntity employee = new EmployeeEntity();
-
-        //employee.setId(employees.size() + 1);
 
         employee.setFirstName(request.getParameter("firstName"));
         employee.setLastName(request.getParameter("lastName"));
@@ -239,13 +452,6 @@ public class Controller extends HttpServlet {
         employee.setDepartmentByDepartmentId(department);
 
         employee.setSalary(Double.valueOf(request.getParameter("salary")));
-
-        request.setAttribute("add_first_name", request.getParameter("firstName"));
-        request.setAttribute("add_last_name", request.getParameter("lastName"));
-        request.setAttribute("add_birth", request.getParameter("birthday"));
-        request.setAttribute("add_job", request.getParameter("position"));
-        request.setAttribute("add_department_id", request.getParameter("departmentId"));
-        request.setAttribute("add_wage", request.getParameter("salary"));
 
         return employee;
     }
@@ -291,5 +497,24 @@ public class Controller extends HttpServlet {
 
         log.debug("Command finished");
         return forward;
+    }
+
+    private void setUpValidationValues(HttpServletRequest request) {
+        request.setAttribute("add_first_name", request.getParameter("firstName"));
+        request.setAttribute("add_last_name", request.getParameter("lastName"));
+        request.setAttribute("add_birth", request.getParameter("birthday"));
+        request.setAttribute("add_job", request.getParameter("position"));
+        request.setAttribute("add_department_id", request.getParameter("departmentId"));
+        request.setAttribute("add_wage", request.getParameter("salary"));
+
+        request.setAttribute("edit_ID", request.getParameter("id"));
+        request.setAttribute("new_edit_ID", request.getParameter("newId"));
+        request.setAttribute("edit_mail", request.getParameter("email"));
+        request.setAttribute("edit_first_name", request.getParameter("firstName"));
+        request.setAttribute("edit_last_name", request.getParameter("lastName"));
+        request.setAttribute("edit_birth", request.getParameter("birthday"));
+        request.setAttribute("edit_job", request.getParameter("position"));
+        request.setAttribute("edit_department_id", request.getParameter("departmentId"));
+        request.setAttribute("edit_wage", request.getParameter("salary"));
     }
 }

@@ -28,7 +28,7 @@
     <!-- the (preferable) browser's locale will be used if we don't set the default locale -->
     <context-param>
         <param-name>javax.servlet.jsp.jstl.fmt.locale</param-name>
-        <param-value>ru</param-value>
+        <param-value>en</param-value>
     </context-param>
 
     <!-- supported locales -->

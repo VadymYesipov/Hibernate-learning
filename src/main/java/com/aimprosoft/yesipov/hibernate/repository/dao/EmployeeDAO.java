@@ -8,7 +8,7 @@ public interface EmployeeDAO {
 
     void addEmployee(EmployeeEntity employee);
 
-    void editEmployee(EmployeeEntity employee);
+    void editEmployee(EmployeeEntity employee, Integer id);
 
     void removeEmployee(EmployeeEntity employee);
 

@@ -14,18 +14,21 @@
 
         <td class="content center">
             <form class="login_form" action="controller" method="post">
-                <input type="hidden" name="command" value="editDepartment"/>
-                <input type="number" value="${edit_ID}" required min="1" name="id" max="${departmentList.size()}" placeholder="<fmt:message key="index.jsp.placeholder.chooseId"/>" /></p>
-                <input type="text" value="${edit_ame}" required name="departmentName" pattern="^[A-ZА-Я][a-zа-яё\s]+" placeholder="<fmt:message key="index.jsp.placeholder.departmentName"/>" /></p>
-                <input type="submit" value="<fmt:message key="index.jsp.submit.edit"/>"/>
+                <input type="hidden" name="command" value="addDepartment"/></p>
+                <input type="text" value="${add_name}" name="departmentName" required pattern="^[A-ZА-Я][a-zа-яё\s]+" placeholder="<fmt:message key="index.jsp.placeholder.departmentName"/>"/></p>
+                <input type="submit" value="<fmt:message key="index.jsp.submit.add"/>"/>
             </form>
         </td>
 
         <td class="content center">
             <form class="login_form" action="controller" method="post">
-                <input type="hidden" name="command" value="addDepartment"/></p>
-                <input type="text" value="${add_name}" name="departmentName" required pattern="^[A-ZА-Я][a-zа-яё\s]+" placeholder="<fmt:message key="index.jsp.placeholder.departmentName"/>"/></p>
-                <input type="submit" value="<fmt:message key="index.jsp.submit.add"/>"/>
+                <input type="hidden" name="command" value="editDepartment"/>
+                <input type="number" value="${edit_ID}" required min="1" max="${departmentList.get(departmentList.size() - 1).getId()}"
+                       name="id" placeholder="<fmt:message key="index.jsp.placeholder.chooseId"/>" /></p>
+                <input type="number" value="${new_edit_ID}" min="1" name="newId"
+                       placeholder="<fmt:message key="index.jsp.placeholder.newId"/>" /></p>
+                <input type="text" value="${edit_ame}" name="departmentName" pattern="^[A-ZА-Я][a-zа-яё\s]+" placeholder="<fmt:message key="index.jsp.placeholder.departmentName"/>" /></p>
+                <input type="submit" value="<fmt:message key="index.jsp.submit.edit"/>"/>
             </form>
         </td>
 

@@ -8,7 +8,7 @@ public interface DepartmentDAO {
 
     void addDepartment(DepartmentEntity department);
 
-    void editDepartment(DepartmentEntity department);
+    void editDepartment(DepartmentEntity department, Integer id);
 
     List<DepartmentEntity> departmentsList();
 

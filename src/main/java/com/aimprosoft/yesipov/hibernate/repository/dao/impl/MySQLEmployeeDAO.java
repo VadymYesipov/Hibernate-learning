@@ -1,7 +1,6 @@
 package com.aimprosoft.yesipov.hibernate.repository.dao.impl;
 
 import com.aimprosoft.yesipov.hibernate.repository.dao.EmployeeDAO;
-import com.aimprosoft.yesipov.hibernate.repository.entity.DepartmentEntity;
 import com.aimprosoft.yesipov.hibernate.repository.entity.EmployeeEntity;
 import com.aimprosoft.yesipov.hibernate.repository.utils.HibernateSessionFactory;
 import org.apache.log4j.Logger;
@@ -42,8 +41,36 @@ public class MySQLEmployeeDAO implements EmployeeDAO {
     }
 
     @Override
-    public void editEmployee(EmployeeEntity employee) {
+    public void editEmployee(EmployeeEntity employee, Integer id) {
+        log.debug("Editing an employee");
 
+        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+
+        session.beginTransaction();
+
+        System.out.println(employee);
+
+        Query query = session.createQuery("update EmployeeEntity " +
+                "set id = :newId, firstName = :firstName, lastName = :lastName, birthday = :birthday, email = :email, " +
+                "job = :job, departmentByDepartmentId.id = :department_id, salary = :salary " +
+                "where id = :id");
+
+        query.setParameter("newId", employee.getId());
+        query.setParameter("firstName", employee.getFirstName());
+        query.setParameter("lastName", employee.getLastName());
+        query.setParameter("birthday", employee.getBirthday());
+        query.setParameter("email", employee.getEmail());
+        query.setParameter("job", employee.getJob());
+        query.setParameter("department_id", employee.getDepartmentByDepartmentId().getId());
+        query.setParameter("salary", employee.getSalary());
+        query.setParameter("id", id);
+
+        int result = query.executeUpdate();
+        log.debug("Count of updated departments:" + result);
+
+        session.getTransaction().commit();
+
+        session.close();
     }
 
     @Override
