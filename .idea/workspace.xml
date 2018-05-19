@@ -7,34 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="359efc81-f8af-45d4-bb88-3297de31d083" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/DepartmentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/DepartmentDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/EmployeeDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLDepartmentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLDepartmentDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLEmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLEmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/service/EditEntityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/service/EditEntityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_edit_department.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_edit_department.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_edit_employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_edit_employee.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/departments.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/departments.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/yesipov/hibernate/repository/dao/DepartmentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/yesipov/hibernate/repository/dao/DepartmentDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/yesipov/hibernate/repository/dao/EmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/yesipov/hibernate/repository/dao/EmployeeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLDepartmentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLDepartmentDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLEmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLEmployeeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/yesipov/hibernate/web/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/yesipov/hibernate/web/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/yesipov/hibernate/web/service/EditEntityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/yesipov/hibernate/web/service/EditEntityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/classes/com/aimprosoft/yesipov/hibernate/repository/dao/DepartmentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/classes/com/aimprosoft/yesipov/hibernate/repository/dao/DepartmentDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/classes/com/aimprosoft/yesipov/hibernate/repository/dao/EmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/classes/com/aimprosoft/yesipov/hibernate/repository/dao/EmployeeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/classes/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLDepartmentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/classes/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLDepartmentDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/classes/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLEmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/classes/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLEmployeeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/classes/com/aimprosoft/yesipov/hibernate/web/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/classes/com/aimprosoft/yesipov/hibernate/web/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/classes/com/aimprosoft/yesipov/hibernate/web/service/EditEntityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/classes/com/aimprosoft/yesipov/hibernate/web/service/EditEntityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/jsp/add_edit_department.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/jsp/add_edit_department.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/jsp/add_edit_employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/jsp/add_edit_employee.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/jsp/departments.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/jsp/departments.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/hibernate-task/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -77,28 +51,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="add_edit_department.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_edit_department.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_edit_employee.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_edit_employee.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="34" column="124" selection-start-line="34" selection-start-column="124" selection-end-line="34" selection-end-column="124" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="235">
               <caret line="129" column="73" selection-start-line="129" selection-start-column="73" selection-end-line="129" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -122,6 +78,54 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AddEntityService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/service/AddEntityService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#AddEntityService#2;class#AddEntityService#0" />
+                <element signature="method#execute#0;class#AddEntityService#0" />
+                <element signature="method#execute#1;class#AddEntityService#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MySQLDepartmentDAO.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLDepartmentDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#MySQLDepartmentDAO#0;class#MySQLDepartmentDAO#0" />
+                <element signature="method#getMySQLDepartmentDAO#0;class#MySQLDepartmentDAO#0" />
+                <element signature="method#departmentsList#0;class#MySQLDepartmentDAO#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MySQLEmployeeDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLEmployeeDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#MySQLEmployeeDAO#0;class#MySQLEmployeeDAO#0" />
+                <element signature="method#getMySQLEmployeeDAO#0;class#MySQLEmployeeDAO#0" />
+                <element signature="method#editEmployee#0;class#MySQLEmployeeDAO#0" />
+                <element signature="method#removeEmployee#0;class#MySQLEmployeeDAO#0" />
+                <element signature="method#employeeList#0;class#MySQLEmployeeDAO#0" />
+                <element signature="method#filteredEmployeeList#0;class#MySQLEmployeeDAO#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="departments.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/departments.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -136,66 +140,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="122" column="55" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditEntityService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/service/EditEntityService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#EditEntityService#2;class#EditEntityService#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySQLEmployeeDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLEmployeeDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="60" column="51" lean-forward="true" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#MySQLEmployeeDAO#0;class#MySQLEmployeeDAO#0" />
-                <element signature="method#getMySQLEmployeeDAO#0;class#MySQLEmployeeDAO#0" />
-                <element signature="method#addEmployee#0;class#MySQLEmployeeDAO#0" />
-                <element signature="method#removeEmployee#0;class#MySQLEmployeeDAO#0" />
-                <element signature="method#employeeList#0;class#MySQLEmployeeDAO#0" />
-                <element signature="method#filteredEmployeeList#0;class#MySQLEmployeeDAO#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySQLDepartmentDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLDepartmentDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#MySQLDepartmentDAO#0;class#MySQLDepartmentDAO#0" />
-                <element signature="method#getMySQLDepartmentDAO#0;class#MySQLDepartmentDAO#0" />
-                <element signature="method#addDepartment#0;class#MySQLDepartmentDAO#0" />
-                <element signature="method#removeDepartment#0;class#MySQLDepartmentDAO#0" />
-                <element signature="method#departmentsList#0;class#MySQLDepartmentDAO#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EncodingFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/filter/EncodingFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="52" column="100" selection-start-line="52" selection-start-column="100" selection-end-line="52" selection-end-column="100" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -271,15 +215,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/EmployeeDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/DepartmentDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/service/EditEntityService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLDepartmentDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/main/AppMain.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/departments.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_edit_department.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_edit_employee.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLEmployeeDAO.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2f236789-035e-4b2b-814b-0a35fccbad73/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLEmployeeDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLDepartmentDAO.java" />
       </list>
     </option>
   </component>
@@ -361,7 +305,47 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HibernateTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HibernateTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HibernateTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HibernateTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HibernateTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HibernateTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HibernateTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HibernateTask" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HibernateTask" type="b2602c69:ProjectViewProjectNode" />
@@ -600,15 +584,16 @@
       <updated>1526459910626</updated>
       <workItem from="1526459914738" duration="25693000" />
       <workItem from="1526545534477" duration="27991000" />
-      <workItem from="1526712583841" duration="18034000" />
+      <workItem from="1526712583841" duration="19758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71718000" />
+    <option name="totallyTimeSpent" value="73442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
@@ -688,35 +673,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="14" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/db/dao/impl/MySQLDepartmentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getDbManager#0;class#MySQLDepartmentDAO#0" />
-            <element signature="method#addDepartment#0;class#MySQLDepartmentDAO#0" />
-            <element signature="method#editDepartment#0;class#MySQLDepartmentDAO#0" />
-            <element signature="method#removeDepartment#0;class#MySQLDepartmentDAO#0" />
-            <element signature="class#DepartmentMapper#0;class#MySQLDepartmentDAO#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/db/dao/DepartmentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/db/dao/EmployeeDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -916,28 +876,6 @@
       </provider>
       <provider editor-type-id="ResourceBundle" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/service/AddEntityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#AddEntityService#2;class#AddEntityService#0" />
-            <element signature="method#execute#0;class#AddEntityService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/EmployeeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/DepartmentDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -961,21 +899,6 @@
           <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLDepartmentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#MySQLDepartmentDAO#0;class#MySQLDepartmentDAO#0" />
-            <element signature="method#getMySQLDepartmentDAO#0;class#MySQLDepartmentDAO#0" />
-            <element signature="method#addDepartment#0;class#MySQLDepartmentDAO#0" />
-            <element signature="method#removeDepartment#0;class#MySQLDepartmentDAO#0" />
-            <element signature="method#departmentsList#0;class#MySQLDepartmentDAO#0" />
           </folding>
         </state>
       </provider>
@@ -1046,40 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/service/EditEntityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#EditEntityService#2;class#EditEntityService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLEmployeeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="60" column="51" lean-forward="true" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#MySQLEmployeeDAO#0;class#MySQLEmployeeDAO#0" />
-            <element signature="method#getMySQLEmployeeDAO#0;class#MySQLEmployeeDAO#0" />
-            <element signature="method#addEmployee#0;class#MySQLEmployeeDAO#0" />
-            <element signature="method#removeEmployee#0;class#MySQLEmployeeDAO#0" />
-            <element signature="method#employeeList#0;class#MySQLEmployeeDAO#0" />
-            <element signature="method#filteredEmployeeList#0;class#MySQLEmployeeDAO#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_edit_employee.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="34" column="124" selection-start-line="34" selection-start-column="124" selection-end-line="34" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://2f236789-035e-4b2b-814b-0a35fccbad73/schema/example/table/department">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1101,9 +990,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/EmployeeDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/db/dao/impl/MySQLDepartmentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getDbManager#0;class#MySQLDepartmentDAO#0" />
+            <element signature="method#addDepartment#0;class#MySQLDepartmentDAO#0" />
+            <element signature="method#editDepartment#0;class#MySQLDepartmentDAO#0" />
+            <element signature="method#removeDepartment#0;class#MySQLDepartmentDAO#0" />
+            <element signature="method#departmentsList#0;class#MySQLDepartmentDAO#0" />
+            <element signature="class#DepartmentMapper#0;class#MySQLDepartmentDAO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/db/dao/impl/MySQLEmployeeDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="112" column="30" lean-forward="true" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
+          <folding>
+            <element signature="method#addEmployee#0;class#MySQLEmployeeDAO#0" />
+            <element signature="method#editEmployee#0;class#MySQLEmployeeDAO#0" />
+            <element signature="method#editEmployee#1;class#MySQLEmployeeDAO#0" />
+            <element signature="method#employeeList#0;class#MySQLEmployeeDAO#0" />
+            <element signature="method#filteredEmployeeList#0;class#MySQLEmployeeDAO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/service/AddEntityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#AddEntityService#2;class#AddEntityService#0" />
+            <element signature="method#execute#0;class#AddEntityService#0" />
+            <element signature="method#execute#1;class#AddEntityService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/service/EditEntityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#EditEntityService#2;class#EditEntityService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_edit_employee.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="34" column="124" selection-start-line="34" selection-start-column="124" selection-end-line="34" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/web/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="235">
           <caret line="129" column="73" selection-start-line="129" selection-start-column="73" selection-end-line="129" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1122,6 +1082,35 @@
             <element signature="method#setUpEmployee#0;class#Controller#0" />
             <element signature="method#addDepartmentAndReturnPath#0;class#Controller#0" />
             <element signature="method#setUpValidationValues#0;class#Controller#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLEmployeeDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#MySQLEmployeeDAO#0;class#MySQLEmployeeDAO#0" />
+            <element signature="method#getMySQLEmployeeDAO#0;class#MySQLEmployeeDAO#0" />
+            <element signature="method#editEmployee#0;class#MySQLEmployeeDAO#0" />
+            <element signature="method#removeEmployee#0;class#MySQLEmployeeDAO#0" />
+            <element signature="method#employeeList#0;class#MySQLEmployeeDAO#0" />
+            <element signature="method#filteredEmployeeList#0;class#MySQLEmployeeDAO#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/yesipov/hibernate/repository/dao/impl/MySQLDepartmentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#MySQLDepartmentDAO#0;class#MySQLDepartmentDAO#0" />
+            <element signature="method#getMySQLDepartmentDAO#0;class#MySQLDepartmentDAO#0" />
+            <element signature="method#departmentsList#0;class#MySQLDepartmentDAO#0" />
           </folding>
         </state>
       </provider>

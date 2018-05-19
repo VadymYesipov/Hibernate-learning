@@ -27,56 +27,92 @@ public class MySQLDepartmentDAO implements DepartmentDAO {
 
     @Override
     public void addDepartment(DepartmentEntity department) {
-        log.debug("Adding a department");
+        Session session = null;
 
-        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        try {
+            session = HibernateSessionFactory.getSessionFactory().openSession();
 
-        session.beginTransaction();
+            session.beginTransaction();
 
-        session.save(department);
+            session.save(department);
 
-        session.getTransaction().commit();
-
-        session.close();
+            session.getTransaction().commit();
+        } catch (RuntimeException e) {
+            try {
+                session.getTransaction().rollback();
+            } catch (RuntimeException e1) {
+                log.error("Couldn't roll back transaction", e1);
+            }
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
     }
 
     @Override
     public void editDepartment(DepartmentEntity department, Integer id) {
         log.debug("Editing a department");
 
-        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        Session session = null;
 
-        session.beginTransaction();
+        try {
+            session = HibernateSessionFactory.getSessionFactory().openSession();
 
-        Query query = session.createQuery("update DepartmentEntity set id = :newId, originalName = :name " +
-                "where id = :id");
+            session.beginTransaction();
 
-        query.setParameter("newId", department.getId());
-        query.setParameter("name", department.getOriginalName());
-        query.setParameter("id", id);
+            Query query = session.createQuery("update DepartmentEntity set id = :newId, originalName = :name " +
+                    "where id = :id");
 
-        int result = query.executeUpdate();
-        log.debug("Count of updated departments:" + result);
+            query.setParameter("newId", department.getId());
+            query.setParameter("name", department.getOriginalName());
+            query.setParameter("id", id);
 
-        session.getTransaction().commit();
+            int result = query.executeUpdate();
+            log.debug("Count of updated departments:" + result);
 
-        session.close();
+            session.getTransaction().commit();
+        } catch (RuntimeException e) {
+            try {
+                session.getTransaction().rollback();
+            } catch (RuntimeException e1) {
+                log.error("Couldn't roll back transaction", e1);
+            }
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
     }
 
     @Override
     public void removeDepartment(DepartmentEntity department) {
-        Session session = HibernateSessionFactory.getSessionFactory().openSession();
+        Session session = null;
 
-        session.beginTransaction();
+        try {
+            session = HibernateSessionFactory.getSessionFactory().openSession();
 
-        Query query =  session.createQuery("delete DepartmentEntity where id = :id");
-        query.setParameter("id", department.getId());
-        int result = query.executeUpdate();
-        log.debug("Count of deleted elements: " + result);
+            session.beginTransaction();
 
-        session.getTransaction().commit();
+            Query query = session.createQuery("delete DepartmentEntity where id = :id");
+            query.setParameter("id", department.getId());
+            int result = query.executeUpdate();
+            log.debug("Count of deleted elements: " + result);
 
-        session.close();
+            session.getTransaction().commit();
+
+            session.close();
+        } catch (RuntimeException e) {
+            try {
+                session.getTransaction().rollback();
+            } catch (RuntimeException e1) {
+                log.error("Couldn't roll back transaction", e1);
+            }
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
     }
 
     @Override
